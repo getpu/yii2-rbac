@@ -141,7 +141,7 @@ class Route extends \yii\base\Object
                     $meta = !empty($matches[1][0]) ? trim($matches[1][0]) : '';
                     $action = Inflector::camel2id(substr($name,6));
                     $routes = [
-                        'route' => $action == 'index' ? $prefix : $prefix .'/'. $action,
+                        'route' => $prefix .'/'. $action,
                         'controller' => $controller->id,
                         'action' => Inflector::camel2id(substr($name,6)),
                         'meta' => $meta,
